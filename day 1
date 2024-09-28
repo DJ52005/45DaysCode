@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isVowel(char ch) {
+    
+    return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u');
+}
+
+int main() {
+    int T;
+    cin >> T;  
+    while (T--) {
+        int N;
+        cin >> N;  
+        string S;
+        cin >> S;  
+        
+        int consonantCount = 0; 
+        bool hardToPronounce = false; 
+
+        // Loop through the string
+        for (int i = 0; i < N; i++) {
+            if (!isVowel(S[i])) {  
+                consonantCount++;
+                if (consonantCount >= 4) {  
+                    hardToPronounce = true;
+                    break;
+                }
+            } else {
+                consonantCount = 0;  
+            }
+        }
+
+        if (hardToPronounce) {
+            cout << "NO" << endl;
+        } else {
+            cout << "YES" << endl;
+        }
+    }
+    return 0;
+}
