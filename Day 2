@@ -1,0 +1,21 @@
+T = int(input())
+for i in range(T):
+    x, y, z = map(int, input().split())
+    a, b, c = map(int, input().split())
+    
+    if (x + y + z > a + b + c):
+        print("DRAGON")
+    elif (x + y + z < a + b + c):
+        print("SLOTH")
+    else:
+        if (x > a):
+            print("DRAGON")
+        elif (x < a):
+            print("SLOTH")
+        else:
+            if (y > b):
+                print("DRAGON")
+            elif (y < b):
+                print("SLOTH")
+            else:
+                print("TIE")
