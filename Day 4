@@ -1,0 +1,24 @@
+from collections import Counter
+
+# Read the number of test cases
+T = int(input())
+
+# Loop through each test case
+for _ in range(T):
+    # Read the length of the array
+    N = int(input())
+    
+    # Read the array
+    A = list(map(int, input().split()))
+    
+    # Calculate the frequency of each element using Counter
+    freq = Counter(A)
+    
+    # Find the maximum frequency
+    max_freq = max(freq.values())
+    
+    # Calculate the minimum number of operations
+    result = N - max_freq
+    
+    # Print the result
+    print(result)
