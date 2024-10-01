@@ -1,0 +1,19 @@
+T = int(input())  
+for i in range(T):
+    N, X = map(int, input().split()) 
+    
+    if N % 2 == 0 and X % 2 == 0:
+        print("Yes")
+    elif N % 2 == 0 and X % 2 != 0:
+        # if (N - X) % 2 != 0:
+            print("YES")
+    #     else:
+    #         print("No")
+    # else:
+    #     print("No")
+    
+    elif N%2!=0 and X%2==0:
+        print("NO")
+        
+    elif N%2!=0 and X%2!=0:
+        print("YES")
