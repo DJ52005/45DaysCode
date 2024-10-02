@@ -1,0 +1,29 @@
+// MEDIUM
+
+T = int(input())
+for i in range(T):
+    x, y, z = map(int, input().split())
+    if(x > 50):
+        print("A")
+    elif(y > 50):
+        print("B")
+    elif(z > 50):
+        print("C")
+    else:
+        print("NOTA")
+
+// EASY
+
+# cook your dish here
+T = int(input())
+for i in range(T):
+    A = []
+    A = list(map(int, input().split()))
+    cnt = 0
+    for i in range(3):
+        if(A[i] == 1):
+            cnt = cnt+1
+    if(cnt >= 2):
+        print("Not now")
+    else:
+        print("Water filling time")
