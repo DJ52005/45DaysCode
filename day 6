@@ -1,0 +1,32 @@
+// easy
+
+
+T = int(input())  # Number of test cases
+for _ in range(T):
+    X, Y = map(int, input().split())
+    
+    # Scenario 1: A first, B second
+    points_A_first = (500 - X * 2) + (1000 - (X + Y) * 4)
+    
+    # Scenario 2: B first, A second
+    points_B_first = (1000 - Y * 4) + (500 - (X + Y) * 2)
+    
+    # Maximum of both scenarios
+    print(max(points_A_first, points_B_first))
+
+// medium
+
+T = int(input())  # Number of test cases
+
+for _ in range(T):
+    N, X = map(int, input().split())  # N: length of array, X: initial number of people
+    A = list(map(int, input().split()))  # Array of events
+
+    current_people = X  # Start with X people in the room
+    max_people = X  # Initialize the maximum with the initial number of people
+
+    for i in range(N):
+        current_people += A[i]  # Update the current number of people
+        max_people = max(max_people, current_people)  # Update the maximum if necessary
+
+    print(max_people)  # Output the maximum number of people in the room
