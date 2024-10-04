@@ -1,0 +1,24 @@
+//easy
+
+T = int(input())
+for i in range(T):
+    X = int(input())
+    if(10-X >= 3):
+        print("Yes")
+    else:
+        print("No")
+
+// medium
+
+T = int(input())
+for i in range(T):
+    N, K = map(int,input().split())
+    A=[]
+    A = list(map(int,input().split()))
+    for i in range(len(A)):
+        if (A[i]<= K):
+            print("1", end="")
+            K = K -A[i]
+        else:
+            print("0", end="")  
+    print() 
