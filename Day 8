@@ -1,0 +1,41 @@
+//easy
+
+T = int(input())
+for i in range(T):
+    A = []
+    A = list(map(int, input().split()))
+    maxi = max(A)
+    sum = 0
+    for j in range(len(A)):
+        sum = sum + A[j]
+    if sum - maxi < maxi:
+        print("Yes")
+    else:
+        print("No")
+
+//medium
+
+T = int(input()) 
+
+for _ in range(T):
+    N = int(input()) 
+    A = list(map(int, input().split())) 
+    unsorted_count = 0
+    for i in range(N - 1):
+        if A[i] > A[i + 1]:
+            unsorted_count += 1
+    
+    if unsorted_count == 0:
+        
+        print("YES")
+    elif unsorted_count == 1:
+        for i in range(N - 1):
+            if A[i] > A[i + 1]:
+                A[i], A[i + 1] = A[i + 1], A[i]
+                break
+        if A == sorted(A):
+            print("YES")
+        else:
+            print("NO")
+    else:
+        print("NO")
