@@ -1,0 +1,23 @@
+//easy
+
+# cook your dish here
+T = int(input())
+for i in range(T):
+    W,X,Y,Z = map(int,input().split())
+    if(W == X or W == Y or W == Z):
+        print("Yes")
+    elif(W == X+Y or W == X+Z or W == Z+Y or W == X+Y+Z):
+        print("Yes")
+    else:
+        print("No")
+
+//medium
+
+# cook your dish here
+T = int(input())
+for i in range(T):
+    N,A = map(int,input().split())
+    if A < (N-A):
+        print(A)
+    else:
+        print(N-A)
