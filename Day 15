@@ -1,0 +1,21 @@
+# Function to calculate minimum bags needed
+def minimum_bags(T, test_cases):
+    results = []
+    for i in range(T):
+        N, K, M = test_cases[i]
+        capacity_of_one_bag = K * M  # Calculate capacity of one bag
+        # Calculate the number of bags needed
+        min_bags = (N + capacity_of_one_bag - 1) // capacity_of_one_bag
+        results.append(min_bags)
+    return results
+
+# Read input
+T = int(input())
+test_cases = [tuple(map(int, input().split())) for _ in range(T)]
+
+# Get results
+results = minimum_bags(T, test_cases)
+
+# Print results
+for result in results:
+    print(result)
