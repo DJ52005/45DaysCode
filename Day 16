@@ -1,0 +1,7 @@
+#easy
+t = int(input())
+for i in range(t):
+    n = int(input())
+    pages = n*1000
+    books = pages//100
+    print(books)
