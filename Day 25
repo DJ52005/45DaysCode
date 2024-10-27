@@ -1,0 +1,25 @@
+def max_tastiness(T, test_cases):
+    results = []
+    for case in test_cases:
+        a, b, c, d = case
+        # Calculate the possible tastiness values
+        tastiness_options = [
+            a + c,  # A + C
+            a + d,  # A + D
+            b + c,  # B + C
+            b + d   # B + D
+        ]
+        # Find the maximum tastiness
+        results.append(max(tastiness_options))
+    return results
+
+# Input handling
+T = int(input())
+test_cases = [tuple(map(int, input().split())) for _ in range(T)]
+
+# Get the results
+results = max_tastiness(T, test_cases)
+
+# Print the results
+for result in results:
+    print(result)
