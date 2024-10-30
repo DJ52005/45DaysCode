@@ -1,0 +1,11 @@
+# cook your dish here
+t = int(input())
+for i in range(t):
+    a,b,k = map(int,input().split())
+    distance = abs(a - b)
+    if distance == 0:
+        steps = 0
+    else:
+        steps = (distance + k - 1) // k
+    print(steps)
+    
