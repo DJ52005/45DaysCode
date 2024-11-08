@@ -1,0 +1,13 @@
+
+t = int(input())
+for _ in range(t):
+    # Input for each test case
+    n, x, s = map(int, input().split())
+    coin = x
+    for __ in range(s):
+        a, b = map(int, input().split())
+        if coin == a:
+            coin = b
+        elif coin == b:
+            coin = a
+    print(coin)
