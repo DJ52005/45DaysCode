@@ -1,0 +1,8 @@
+# cook your dish here
+T = int(input())
+for _ in range(T):
+    N, X = map(int, input().split())
+    H = list(map(int, input().split()))
+    singlet = sum((h + X - 1) // X for h in H)
+    multit = max(H)
+    print(min(singlet, multit))
