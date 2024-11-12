@@ -1,0 +1,10 @@
+T = int(input().strip())
+results = []
+for _ in range(T):
+    N, X, Y = map(int, input().strip().split())
+    horizontal_vertical = 2 * (N - 1)
+    primary_diagonal = min(X - 1, Y - 1) + min(N - X, N - Y)
+    anti_diagonal = min(X - 1, N - Y) + min(N - X, Y - 1)
+    results.append(horizontal_vertical + primary_diagonal + anti_diagonal)
+for result in results:
+    print(result)
