@@ -1,0 +1,7 @@
+T = int(input().strip())
+results = []
+for _ in range(T):
+    A, B, C = map(int, input().strip().split())
+    results.append(A + B + C - min(A, B, C))
+for result in results:
+    print(result)
