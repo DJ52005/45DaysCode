@@ -1,0 +1,10 @@
+# cook your dish here
+t = int(input())
+for i in range(t):
+    n = int(input())
+    if n == 4:
+        print(n)
+    else:
+        extra = n//5
+        print(n-extra)
+   
